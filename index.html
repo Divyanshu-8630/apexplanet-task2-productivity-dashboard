@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2 - Responsive Productivity Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <h1 class="logo">Productivity Dashboard</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#todo">To-Do</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <span class="badge">ApexPlanet Internship - Task 2</span>
+        <h2>Responsive Dashboard with Form Validation & DOM Manipulation</h2>
+        <p>
+          This project demonstrates intermediate HTML, CSS, and JavaScript skills.
+          It includes a responsive layout, a validated contact form, and a dynamic
+          to-do list built with DOM manipulation.
+        </p>
+      </div>
+      <div class="hero-card">
+        <h3>Task 2 Highlights</h3>
+        <ul>
+          <li>Responsive Navigation with Flexbox</li>
+          <li>Grid-based Layout Sections</li>
+          <li>Contact Form Validation</li>
+          <li>Dynamic To-Do List</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features" class="features-grid">
+      <article class="feature-box">
+        <h3>Responsive Design</h3>
+        <p>
+          Built using Flexbox, Grid, and media queries for desktop, tablet, and mobile screens.
+        </p>
+      </article>
+
+      <article class="feature-box">
+        <h3>Form Validation</h3>
+        <p>
+          The form checks required fields, email format, and message length before submission.
+        </p>
+      </article>
+
+      <article class="feature-box">
+        <h3>DOM Manipulation</h3>
+        <p>
+          Users can add and remove tasks dynamically without refreshing the page.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-grid">
+      <section id="contact" class="card">
+        <h2>Contact Form</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" />
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+            <small class="error" id="messageError"></small>
+          </div>
+
+          <button type="submit" class="primary-btn">Submit Form</button>
+          <p id="successMessage" class="success-message"></p>
+        </form>
+      </section>
+
+      <section id="todo" class="card">
+        <h2>Dynamic To-Do List</h2>
+        <div class="todo-input-row">
+          <input type="text" id="taskInput" placeholder="Enter a new task" />
+          <button id="addTaskBtn" class="primary-btn">Add Task</button>
+        </div>
+        <small class="error" id="taskError"></small>
+
+        <ul id="taskList" class="task-list"></ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Task 2 Project | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
